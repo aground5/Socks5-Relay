@@ -1,7 +1,13 @@
 ﻿using System.Net;
 using Socks5.Core.Plugin;
+using Socks5.Core.RelayPlugin;
 using Socks5.Core.Socks;
 using Socks5.Core.SocksServer;
+
+RelayConfigs.addRelayServer("121.126.201.60", 26972, "test", "test");
+RelayConfigs.addRelayServer("125.7.149.43", 20032, "test", "test");
+RelayConfigs.addRelayServer("125.7.155.75", 23728, "test", "test");
+RelayConfigs.index = 0;
 
 var socks5Server = new Socks5Server(IPAddress.Any, 4444);
 socks5Server.Start();
